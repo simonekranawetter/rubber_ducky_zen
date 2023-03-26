@@ -1,14 +1,37 @@
 <template>
-  <div>
-    <h1>Rubber Ducky Page</h1>
-    <p>... a ducky helping you debug will soon be with you!</p>
+  <div class="container">
+    <div class="ducky">
+      <h1>Debug Support</h1>
+      <div class="ducky-pic"><img src="../assets/ducky.png" alt="" /></div>
+      <p>... a ducky helping you debug will soon be with you!</p>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'RubberDucky',
+  name: "RubberDucky",
 });
 </script>
+<style scoped>
+.container {
+  max-width: 1000px;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 40px 0px;
+}
+img {
+  border-radius: 18px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 5px;
+    display: block;
+  }
+  img {
+    width: 300px;
+  }
+}
+</style>
