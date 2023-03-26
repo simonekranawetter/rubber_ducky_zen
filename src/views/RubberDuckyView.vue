@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="ducky">
-      <h1>Debug Support</h1>
+      <h2>Debug Support</h2>
       <div class="ducky-pic"><img src="../assets/ducky.png" alt="" /></div>
       <p>... a ducky helping you debug will soon be with you!</p>
     </div>
@@ -20,7 +20,6 @@ export default defineComponent({
   max-width: 1000px;
   margin: 20px;
   border-radius: 20px;
-  border: 1px solid salmon;
 }
 img {
   border-radius: 18px;
