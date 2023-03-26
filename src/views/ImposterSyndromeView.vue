@@ -71,7 +71,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .container{
-    padding-top: 40px;
+    padding-top: 30px;
     display: block;
   }
 }
