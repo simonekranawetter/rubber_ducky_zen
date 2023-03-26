@@ -9,7 +9,9 @@
           <router-link to="/" class="links">Home</router-link>
         </li>
         <li class="list-item">
-          <router-link to="/zen" class="links">Zen</router-link>
+          <router-link to="/imposter" class="links"
+            >Imposter Syndrome Buster</router-link
+          >
         </li>
         <li class="list-item">
           <router-link to="/rubberducky" class="links"

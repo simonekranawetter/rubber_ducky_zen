@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Zen Page</h1>
+    <h1>Imposter Syndrome Buster Page</h1>
     <p>Coming Soon!</p>
   </div>
 </template>
@@ -9,6 +9,6 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Zen',
+  name: 'ImposterSyndrome',
 });
 </script>

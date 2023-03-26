@@ -3,13 +3,13 @@ import { createApp } from 'vue';
 import './style.css';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from './views/HomeView.vue';
-import Zen from './views/ZenView.vue';
 import RubberDucky from './views/RubberDuckyView.vue';
+import ImposterSyndrome from './views/ImposterSyndromeView.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Home },
-  { path: '/zen', component: Zen },
   { path: '/rubberducky', component: RubberDucky },
+  { path: '/imposter', component: ImposterSyndrome },
 ];
 
 const router = createRouter({
