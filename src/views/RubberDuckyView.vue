@@ -20,14 +20,13 @@ export default defineComponent({
   max-width: 1000px;
   margin: 20px;
   border-radius: 20px;
-  padding: 40px 0px;
+  border: 1px solid salmon;
 }
 img {
   border-radius: 18px;
 }
 @media screen and (max-width: 768px) {
   .container {
-    padding-top: 5px;
     display: block;
   }
   img {
