@@ -2,7 +2,7 @@
   <div class="container">
     <div class="smaller-container">
       <div class="quote">
-        <p>{{ quote }}</p>
+        <h2>{{ quote }}</h2>
       </div>
     </div>
     <a href="#" @click="fetchNewQuote">Click me!
@@ -42,7 +42,6 @@ export default defineComponent({
 <style scoped>
 .container {
   max-width: 1000px;
-  margin: 20px;
   border-radius: 20px;
   padding: 40px 0px;
 }
@@ -50,7 +49,8 @@ export default defineComponent({
   display: flex;
   text-align: center;
   padding: 20px;
-  font-size: xx-large;
+  font-size: large;
+  color: var(--light-blue);
 }
 .smaller-container {
   display: flex;
