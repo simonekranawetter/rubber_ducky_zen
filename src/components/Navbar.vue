@@ -41,7 +41,6 @@ nav {
 nav > img {
   height: 40px;
   padding-right: 10px;
-  margin-top: -10px;
 }
 
 nav > ul > li {
