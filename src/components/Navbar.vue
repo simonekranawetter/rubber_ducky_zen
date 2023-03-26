@@ -1,61 +1,144 @@
 <template>
-  <nav>
-    <div class="logo">
-      <router-link to="/">
-        <img src="../assets/logo.png" alt="Logo" />
-      </router-link>
-      <h1>Rubber Ducky Zen</h1>
-    </div>
-    <ul class="navlinks">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/zen">Zen</router-link></li>
-      <li><router-link to="/rubberducky">Rubber Ducky</router-link></li>
-    </ul>
-  </nav>
+  <div class="inner">
+    <nav>
+      <img src="../assets/logo.png" alt="" />
+      <a href="#" class="logo">Rubber Ducky Zen</a>
+      <input type="checkbox" id="nav" /><label for="nav"></label>
+      <ul class="navigation">
+        <li class="list-item">
+          <router-link to="/" class="links">Home</router-link>
+        </li>
+        <li class="list-item">
+          <router-link to="/zen" class="links">Zen</router-link>
+        </li>
+        <li class="list-item">
+          <router-link to="/rubberducky" class="links"
+            >Rubber Ducky</router-link
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
-
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
-nav {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: space-between;
+@import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
+
+.inner {
+  max-width: 1000px;
+  margin: 0;
   padding: 10px;
-  position: sticky;
-  top: 0;
-  min-width: 900px;
+  position: relative;
+}
+nav {
+  display: flex;
+  padding-top: 20px;
 }
 .logo {
-  display: flex;
-  align-items: center;
-  padding-right: 1rem;
+  color: var(--yellow);
+  font-weight: 800;
+  font-size: 20px;
 }
-.logo img {
-  max-width: 150px;
+nav > img {
+  height: 40px;
+  padding-right: 10px;
+  margin-top: -10px;
 }
-.logo h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  font-family: 'Coiny', cursive;
+
+nav > ul > li {
+  text-align: center;
+  line-height: 40px;
+  margin-left: 70px;
+  list-style-type: none;
 }
-.navlinks {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  align-items: end;
+
+nav ul li:hover {
+  cursor: pointer;
+  position: relative;
 }
-li {
-  margin-right: 10px;
-}
-li:last-child {
-  margin-right: 0;
-}
-a {
-  color: white;
+
+.list-item {
+  float: left;
   text-decoration: none;
 }
-.active {
-  font-weight: bold;
+nav a {
+  font-family: "Coiny", cursive;
+  color: var(--medium-blue);
+}
+nav a:active {
+  color: var(--light-blue);
+}
+nav > ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+[type="checkbox"],
+label {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  label {
+    display: block;
+    background: #222;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    padding-top: 25px;
+  }
+  label:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #777;
+    margin: 7px 5px;
+    box-shadow: 0px 10px 0px #777, 0px 20px 0px #777;
+  }
+  [type="checkbox"]:checked ~ ul {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    padding-top: 30px;
+  }
+  nav a {
+    color: var(--medium-blue);
+  }
+  nav ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: left;
+    background: var(--dark-background);
+    text-indent: 20px;
+  }
+  nav > ul > li {
+    margin-left: 0px;
+  }
+  nav > ul li ul li {
+    display: block;
+    float: none;
+  }
+  nav > ul li ul {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    float: none;
+  }
+  h1 {
+    font-size: 26px;
+  }
 }
 </style>
