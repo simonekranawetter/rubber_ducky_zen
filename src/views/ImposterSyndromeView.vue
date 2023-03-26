@@ -44,7 +44,7 @@ export default defineComponent({
   max-width: 1000px;
   margin: 20px;
   border-radius: 20px;
-  padding: 100px 0px;
+  padding: 40px 0px;
 }
 .quote {
   display: flex;
@@ -71,7 +71,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .container{
-    padding-top: 10px;
+    padding-top: 5px;
     display: block;
   }
 }
