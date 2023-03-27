@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="imposter">
-      <img src="../assets/unicornduck.png" alt="" />
+      <img src="../assets/unicornducky.png" alt="" />
       <div class="text">
         <h3>Fight imposter syndrome and stay motivated</h3>
         <p>

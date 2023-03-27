@@ -6,7 +6,7 @@
       </div>
     </div>
     <a href="#" @click="fetchNewQuote">Click me!
-      <img src="../assets/unicornduck.png" alt="">
+      <img src="../assets/unicornducky.png" alt="">
     </a>
   </div>
 </template>
