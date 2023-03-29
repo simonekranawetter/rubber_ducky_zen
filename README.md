@@ -1,21 +1,13 @@
-# Vue 3 + Vite
+# Rubber Ducky Zen
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![Debugging Rubber Ducky](../rubber_ducky_zen/src/assets/logo.png  "Rubber Ducky Debugger is here to help")
+Rubber Ducky Zen is a web application built using Vue.js and TypeScript, and is hosted on Vercel. The idea for this app came to me during my final internship, when I was struggling with imposter syndrome and needed some debugging help.
 
-While this project uses Vue.js, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+The app's beautiful - or slightly questionable - design features such as original images were created by Midjourney, while the playful and memorable name "Rubber Ducky Zen" was suggested by ChatGPT. The app's ultimate goal is to provide a peaceful and calming space for users to unwind and focus on their mental and emotional wellbeing, while also paying tribute to the age-old practice of rubber duck debugging, a technique that I have come to love since I started programming.
 
-## Deploy Your Own
+![Unicorn Rubber Ducky](../rubber_ducky_zen/src/assets/unicornducky.png  "Unicorn Rubber Ducky")
+The concept behind rubber duck debugging is simple yet effective - if you explain your code line by line to a rubber duck and work through it together, the solution to your problem will come to you and you can fix it. This project is my final exam for EC Utbildning.
 
-Deploy your own Vite project with Vercel.
+![Debugging Rubber Ducky](../rubber_ducky_zen/src/assets/zenducky2.png  "Rubber Ducky Debugger is here to help")
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vite&template=vite)
-
-_Live Example: https://vite-vue-template.vercel.app_
-
-### Deploying From Your Terminal
-
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
-```
+The ultimate goal of Rubber Ducky Zen is to provide a peaceful and calming space for users to unwind and focus on their mental and emotional wellbeing. While the app is inspired by the concept of rubber duck debugging and is certainly a helpful tool for fellow programmers, it's also intended to be a fun and enjoyable experience for anyone needing a quick break from the demands of their day-to-day life. Whether you're a developer looking for a debugging buddy or just seeking a moment of tranquility, we hope that Rubber Ducky Zen will be a source of comfort and relaxation for you.
