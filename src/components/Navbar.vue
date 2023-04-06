@@ -39,6 +39,7 @@ nav {
   color: var(--yellow);
   font-weight: 800;
   font-size: 20px;
+  line-height: 2.5;
 }
 nav > img {
   height: 40px;
@@ -47,7 +48,7 @@ nav > img {
 
 nav > ul > li {
   text-align: center;
-  line-height: 40px;
+  line-height: 1;
   margin-left: 70px;
   list-style-type: none;
 }
@@ -121,6 +122,7 @@ label {
     float: none;
     width: 100%;
     text-align: left;
+    line-height: 40px;
     background: var(--dark-background);
     text-indent: 20px;
   }
