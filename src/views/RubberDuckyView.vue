@@ -47,8 +47,10 @@
   display: grid;
 }
 img {
-  height: 60px;
-  padding-right: 20px;
+  height: 80px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-left: 40px;
 }
 .debug-ducky {
   display: flex;
@@ -86,6 +88,9 @@ img {
   .container{
     width: 100vw;
     padding-top: 20px;
+  }
+  img {
+    margin-left: -20px;
   }
 }
 </style>
