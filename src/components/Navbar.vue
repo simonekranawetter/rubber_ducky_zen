@@ -56,8 +56,8 @@ body {
   line-height: 1.6;
 }
 .container {
-  max-width: 1000px;
-  padding: 0.5rem 1.4rem;
+  width: 100vw;
+  padding: 0.5rem 1rem 0.5rem 0rem;
   margin: 0 auto;
 }
 #navbar {
@@ -185,6 +185,9 @@ body {
   padding: 1em;
 }
 @media screen and (min-width: 700px) {
+  .container{
+    width: 1000px;
+  }
   #navbar-toggle,
   #navbar-toggle[aria-expanded='true'] {
     display: none;
