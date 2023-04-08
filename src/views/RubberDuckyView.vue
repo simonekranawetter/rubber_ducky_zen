@@ -8,7 +8,7 @@
         </div>
         
       </div>
-      <textarea name="debug" id="debug" cols="30" rows="10"></textarea>
+      <textarea name="debug" id="debug" cols="30" rows="10" v-model="debugText"></textarea>
     </div>
     <div class="help">
       <button class="button" @click="fetchNewQuote">Help me debug!</button>
@@ -96,6 +96,7 @@ export default defineComponent({
   data() {
     return {
       quote: "",
+      debugText: "",
     };
   },
   methods: {
@@ -109,6 +110,7 @@ export default defineComponent({
     },
     async fetchNewQuote() {
       this.quote = await this.getRandomQuote();
+      this.debugText = "";
     },
   },
   async mounted() {
