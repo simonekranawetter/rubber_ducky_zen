@@ -56,7 +56,6 @@ img {
   font-weight: 600;
   font-style: italic;
   max-width: 800px;
-  height: 7vh;
 }
 #debug {
   justify-self: center;
@@ -86,9 +85,6 @@ img {
   .container{
     width: 100vw;
     padding-top: 20px;
-  }
-  .debug-ducky {
-    height: 15vh;
   }
 }
 </style>
