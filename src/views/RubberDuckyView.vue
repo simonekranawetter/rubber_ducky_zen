@@ -107,7 +107,7 @@ export default defineComponent({
   },
   methods: {
     async getRandomQuote(): Promise<string> {
-      const response = await fetch("/affimations.txt");
+      const response = await fetch("/debug.txt");
       const text = await response.text();
       const QUOTES = text.split("\n");
       const index = Math.floor(Math.random() * QUOTES.length);
