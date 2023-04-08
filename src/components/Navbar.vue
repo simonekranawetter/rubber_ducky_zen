@@ -92,8 +92,9 @@ body {
 .navbar-link {
   justify-content: left;
   width: 100%;
-  padding: 0.4em 0.8em;
+  padding: 0.4em 0.5em;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .navbar-link:is(:focus, :hover) {
