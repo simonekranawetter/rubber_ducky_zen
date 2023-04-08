@@ -5,7 +5,10 @@
         <div class="navbar-logo">
           <img class="logo" src="../assets/logo.png" alt="">
         </div>
-        Rubber Ducky Zen
+        <p class="logo-text">
+          Rubber Ducky Zen
+        </p>
+        
       </router-link>
       <button
         type="button"
@@ -81,8 +84,13 @@ body {
   color: var(--light-blue);
   text-decoration: none;
   display: flex;
-  font-weight: 400;
+  font-weight: 800;
   align-items: center;
+}
+.logo-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--yellow);
+  font-size: larger;
 }
 
 .home-link:is(:focus, :hover) {
