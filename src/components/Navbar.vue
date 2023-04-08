@@ -1,147 +1,236 @@
 <template>
-  <div class="inner">
-    <nav>
-      <img src="../assets/logo.png" alt="" />
-      <a href="#" class="logo">Rubber Ducky Zen</a>
-      <input type="checkbox" id="nav" /><label for="nav"></label>
-      <ul class="navigation">
-        <li class="list-item">
-          <router-link to="/" class="links">Home</router-link>
-        </li>
-        <li class="list-item">
-          <router-link to="/imposter" class="links"
-            >Imposter Syndrome Buster</router-link
-          >
-        </li>
-        <li class="list-item">
-          <router-link to="/rubberducky" class="links"
-            >Rubber Ducky</router-link
-          >
-        </li>
-      </ul>
+  <header id="navbar">
+    <nav class="navbar-container container">
+      <router-link to="/" class="navbar-link">
+        <div class="navbar-logo">
+          <img class="logo" src="../assets/logo.png" alt="">
+        </div>
+        Rubber Ducky Zen
+      </router-link>
+      <button
+        type="button"
+        id="navbar-toggle"
+        aria-controls="navbar-menu"
+        aria-label="Toggle menu"
+        :aria-expanded="isNavbarOpen ? 'true' : 'false'"
+        @click="toggleNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div
+        id="navbar-menu"
+        aria-labelledby="navbar-toggle"
+        :class="{ opened: isNavbarOpen }"
+        @click="closeNavbar">
+        <ul class="navbar-links">
+          <li class="navbar-item">
+            <router-link to="/" class="navbar-link">Home</router-link>
+          </li>
+          <li class="navbar-item">
+            <router-link to="/imposter" class="navbar-link"
+              >Imposter Syndrome Buster</router-link
+            >
+          </li>
+          <li class="navbar-item">
+            <router-link to="/rubberducky" class="navbar-link"
+              >Rubber Ducky</router-link
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
-  </div>
+  </header>
 </template>
+
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
-
-.inner {
-  max-width: 1000px;
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 10px;
-  position: relative;
-}
-nav {
-  display: flex;
-  padding-top: 20px;
-}
-.logo {
-  color: var(--yellow);
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 2.5;
-}
-nav > img {
-  height: 40px;
-  padding-right: 10px;
+  padding: 0;
 }
 
-nav > ul > li {
-  text-align: center;
-  line-height: 1;
-  margin-left: 70px;
-  list-style-type: none;
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
-
-nav ul li:hover {
-  cursor: pointer;
-  position: relative;
+.container {
+  max-width: 1000px;
+  padding: 0.5rem 1.4rem;
+  margin: 0 auto;
 }
-
-.list-item {
-  float: left;
-  text-decoration: none;
-}
-nav a {
-  font-family: "Coiny", cursive;
-  color: var(--medium-blue);
-}
-nav a:active {
-  color: var(--light-blue);
-}
-nav > ul li ul {
-  display: none;
-  position: absolute;
+#navbar {
   left: 0;
-  top: 100%;
-  width: 100%;
-  z-index: 2000;
+  right: 0;
+  background-color: var(--nav-background);
 }
-[type="checkbox"],
-label {
-  display: none;
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.navbar-item {
+  margin: 0.4em;
+  width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  nav ul {
+.home-link,
+.navbar-link {
+  color: var(--light-blue);
+  text-decoration: none;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+
+.home-link:is(:focus, :hover) {
+  color: var(--yellow);
+}
+
+.navbar-link {
+  justify-content: left;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+}
+
+.navbar-link:is(:focus, :hover) {
+  color: var(--yellow);
+  background-color: var(--nav-background);
+}
+.navbar-logo {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-inline-start: 0.5em;
+  padding: 10px;
+  margin-right: 10px;
+}
+.logo{
+  height: 40px;
+  margin-top: -14px;
+  margin-left: -12px;
+}
+#navbar-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 2px;
+  background-color: var(--yellow);
+}
+
+#navbar-toggle:is(:focus, :hover) .icon-bar {
+  background-color: var(--light-blue);
+}
+#navbar-toggle[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+
+#navbar-toggle[aria-expanded='true'] .icon-bar:first-child {
+  transform: rotate(45deg);
+}
+
+#navbar-toggle[aria-expanded='true'] .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+#navbar-toggle[aria-expanded='true'] .icon-bar:last-child {
+  transform: rotate(-45deg);
+}
+#navbar-menu {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+}
+#navbar-toggle[aria-expanded='true'] + #navbar-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+}
+.navbar-links {
+  list-style: none;
+  position: absolute;
+  background-color: var(--nav-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin: 1.4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
+  padding: 1em;
+}
+@media screen and (min-width: 700px) {
+  #navbar-toggle,
+  #navbar-toggle[aria-expanded='true'] {
     display: none;
   }
-  label {
+
+  #navbar-menu,
+  #navbar-toggle[aria-expanded='true'] + #navbar-menu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
     display: block;
-    background: #222;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 0px;
-    padding-top: 25px;
+    height: 100%;
   }
-  label:after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 5px;
-    background: #777;
-    margin: 7px 5px;
-    box-shadow: 0px 10px 0px #777, 0px 20px 0px #777;
-  }
-  [type="checkbox"]:checked ~ ul {
-    display: block;
-    z-index: 9999;
-    position: absolute;
-    right: 20px;
-    left: 20px;
-    padding-top: 30px;
-  }
-  nav a {
-    color: var(--medium-blue);
-  }
-  nav ul li {
-    display: block;
-    float: none;
+
+  .navbar-links,
+  #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: static;
+    flex-direction: row;
     width: 100%;
-    text-align: left;
-    line-height: 40px;
-    background: var(--dark-background);
-    text-indent: 20px;
-  }
-  nav > ul > li {
-    margin-left: 0px;
-  }
-  nav > ul li ul li {
-    display: block;
-    float: none;
-  }
-  nav > ul li ul {
-    display: block;
-    position: relative;
-    width: 100%;
-    z-index: 9999;
-    float: none;
-  }
-  h1 {
-    font-size: 26px;
+    height: 100%;
+    background-color: var(--nav-background);
   }
 }
 </style>
+<script>
+export default {
+  data() {
+    return {
+      isNavbarOpen: false,
+    };
+  },
+  methods: {
+    toggleNavbar() {
+      this.isNavbarOpen = !this.isNavbarOpen;
+      const navbarToggle = document.getElementById("navbar-toggle");
+      const ariaExpanded = this.isNavbarOpen ? "true" : "false";
+      navbarToggle.setAttribute("aria-expanded", ariaExpanded);
+    },
+    closeNavbar() {
+      this.isNavbarOpen = false;
+      const navbarToggle = document.getElementById("navbar-toggle");
+      navbarToggle.setAttribute("aria-expanded", "false");
+    },
+  },
+};
+
+</script>
