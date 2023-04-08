@@ -27,6 +27,7 @@
   color: var(--dark-background);
   padding: 10px;
   border-radius: .4em;
+  z-index: -1;
 }
 .ducky-quote::after{
 	content: '';
