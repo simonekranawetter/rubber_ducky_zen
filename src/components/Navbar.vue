@@ -3,12 +3,9 @@
     <nav class="navbar-container container">
       <router-link to="/" class="navbar-link">
         <div class="navbar-logo">
-          <img class="logo" src="../assets/logo.png" alt="">
+          <img class="logo" src="../assets/logo.png" alt="" />
         </div>
-        <p class="logo-text">
-          Rubber Ducky Zen
-        </p>
-        
+        <p class="logo-text">Rubber Ducky Zen</p>
       </router-link>
       <button
         type="button"
@@ -33,6 +30,11 @@
           <li class="navbar-item">
             <router-link to="/imposter" class="navbar-link"
               >Imposter Syndrome Buster</router-link
+            >
+          </li>
+          <li class="navbar-item">
+            <router-link to="/selfcare" class="navbar-link"
+              >Self Care</router-link
             >
           </li>
           <li class="navbar-item">
@@ -88,7 +90,7 @@ body {
   align-items: center;
 }
 .logo-text {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: var(--yellow);
   font-size: larger;
 }
@@ -117,7 +119,7 @@ body {
   padding: 10px;
   margin-right: 10px;
 }
-.logo{
+.logo {
   height: 40px;
   margin-top: -14px;
   margin-left: -12px;
@@ -144,21 +146,21 @@ body {
 #navbar-toggle:is(:focus, :hover) .icon-bar {
   background-color: var(--light-blue);
 }
-#navbar-toggle[aria-expanded='true'] .icon-bar:is(:first-child, :last-child) {
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
   position: absolute;
   margin: 0;
   width: 30px;
 }
 
-#navbar-toggle[aria-expanded='true'] .icon-bar:first-child {
+#navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
   transform: rotate(45deg);
 }
 
-#navbar-toggle[aria-expanded='true'] .icon-bar:nth-child(2) {
+#navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
   opacity: 0;
 }
 
-#navbar-toggle[aria-expanded='true'] .icon-bar:last-child {
+#navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
   transform: rotate(-45deg);
 }
 #navbar-menu {
@@ -170,7 +172,7 @@ body {
   left: 0;
   right: 0;
 }
-#navbar-toggle[aria-expanded='true'] + #navbar-menu {
+#navbar-toggle[aria-expanded="true"] + #navbar-menu {
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 1;
   visibility: visible;
@@ -189,20 +191,20 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-#navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
+#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
   padding: 1em;
 }
 @media screen and (min-width: 700px) {
-  .container{
+  .container {
     width: 1000px;
   }
   #navbar-toggle,
-  #navbar-toggle[aria-expanded='true'] {
+  #navbar-toggle[aria-expanded="true"] {
     display: none;
   }
 
   #navbar-menu,
-  #navbar-toggle[aria-expanded='true'] + #navbar-menu {
+  #navbar-toggle[aria-expanded="true"] + #navbar-menu {
     visibility: visible;
     opacity: 1;
     position: static;
@@ -211,7 +213,7 @@ body {
   }
 
   .navbar-links,
-  #navbar-toggle[aria-expanded='true'] + #navbar-menu .navbar-links {
+  #navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
     margin: 0;
     padding: 0;
     box-shadow: none;
@@ -244,5 +246,4 @@ export default {
     },
   },
 };
-
 </script>

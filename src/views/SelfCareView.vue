@@ -2,7 +2,7 @@
   <div class="container">
     <div class="smaller-container">
       <div class="debug-ducky">
-        <img src="../assets/unicornducky.png" alt="" />
+        <img src="../assets/zenducky.png" alt="" />
         <div class="ducky-quote">
           <p>{{ quote }}</p>
         </div>
@@ -13,35 +13,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "ImposterSyndrome",
-  data() {
-    return {
-      quote: "",
-    };
-  },
-  methods: {
-    async getRandomQuote(): Promise<string> {
-      const response = await fetch("/affimations.txt");
-      const text = await response.text();
-      const QUOTES = text.split("\n");
-      const index = Math.floor(Math.random() * QUOTES.length);
-      console.log(response);
-      return QUOTES[index];
-    },
-    async fetchNewQuote() {
-      this.quote = await this.getRandomQuote();
-    },
-  },
-  async mounted() {
-    this.quote = await this.getRandomQuote();
-  },
-});
-</script>
 <style scoped>
 .container {
   width: 800px;
@@ -122,3 +93,32 @@ img {
   }
 }
 </style>
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "SelfCare",
+  data() {
+    return {
+      quote: "",
+    };
+  },
+  methods: {
+    async getRandomQuote(): Promise<string> {
+      const response = await fetch(
+        "https://raw.githubusercontent.com/jenniferlynparsons/selfcaretech/master/botgrammar.json"
+      );
+      const data = await response.json();
+      const QUOTES = data.origin;
+      const index = Math.floor(Math.random() * QUOTES.length);
+      return QUOTES[index];
+    },
+    async fetchNewQuote() {
+      this.quote = await this.getRandomQuote();
+    },
+  },
+  async mounted() {
+    this.quote = await this.getRandomQuote();
+  },
+});
+</script>

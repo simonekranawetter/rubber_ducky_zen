@@ -79,10 +79,6 @@ img {
   color: var(--dark-background);
   padding-left: 20px;
 }
-.button.button:click {
-  background-color: var(--yellow);
-  border: 1px solid var(--light-blue);
-}
 
 @media screen and (max-width: 768px) {
   .container{

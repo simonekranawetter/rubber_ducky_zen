@@ -16,13 +16,14 @@
     <div class="imposter">
       <img src="../assets/unicornducky.png" alt="" />
       <div class="text">
-        <h3>Fight imposter syndrome and stay motivated</h3>
+        <h3>Fight imposter syndrome and take care of yourself</h3>
         <p>
           It's not uncommon for developers to feel like they're not good enough
-          or that they don't belong. That's why Rubber Ducky Zen includes a
-          section dedicated to helping you fight imposter syndrome and stay
-          motivated. With daily affirmations and motivational quotes, you can
-          start each day feeling confident and ready to take on any challenge.
+          or that they don't belong. That's why Rubber Ducky Zen includes
+          sections dedicated to helping you fight imposter syndrome and self
+          care tips form selfcaretech-ducky. With daily affirmations and
+          motivational quotes, you can start each day feeling confident and
+          ready to take on any challenge.
         </p>
       </div>
     </div>
@@ -79,7 +80,9 @@ img {
   padding-left: 20px;
 }
 @media screen and (max-width: 768px) {
-  .ducky, .imposter, .welcome {
+  .ducky,
+  .imposter,
+  .welcome {
     display: block;
   }
   h1 {
