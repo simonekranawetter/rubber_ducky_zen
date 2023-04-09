@@ -19,8 +19,8 @@
         <h3>Fight imposter syndrome and take care of yourself</h3>
         <p>
           It's not uncommon for developers to feel like they're not good enough
-          or that they don't belong. That's why Rubber Ducky Zen includes
-          sections dedicated to helping you fight imposter syndrome and self
+          or that they don't belong. That's why Rubber Ducky Zen includes a
+          section dedicated to helping you fight imposter syndrome with self
           care tips form selfcaretech-ducky. With daily affirmations and
           motivational quotes, you can start each day feeling confident and
           ready to take on any challenge.

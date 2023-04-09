@@ -28,11 +28,6 @@
             <router-link to="/" class="navbar-link">Home</router-link>
           </li>
           <li class="navbar-item">
-            <router-link to="/imposter" class="navbar-link"
-              >Imposter Syndrome Buster</router-link
-            >
-          </li>
-          <li class="navbar-item">
             <router-link to="/selfcare" class="navbar-link"
               >Self Care</router-link
             >
