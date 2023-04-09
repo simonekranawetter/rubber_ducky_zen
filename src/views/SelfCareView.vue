@@ -2,7 +2,7 @@
   <div class="container">
     <div class="smaller-container">
       <div class="debug-ducky">
-        <img src="../assets/zenducky.png" alt="" />
+        <img src="../assets/unicornducky.png" alt="" />
         <div class="ducky-quote">
           <p>{{ quote }}</p>
         </div>
