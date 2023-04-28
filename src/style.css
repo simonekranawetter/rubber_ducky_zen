@@ -22,7 +22,7 @@
   --light-blue: #7cbee9;
 }
 /* Font imports */
-@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Roboto+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Inter:wght@400;500&display=swap');
 a {
   font-weight: 500;
   color: var(--light-blue);
@@ -37,7 +37,7 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Inter', sans-serif;
 }
 
 h1 {
