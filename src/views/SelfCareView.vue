@@ -22,7 +22,9 @@
 .ducky-quote{
   position: relative;
   background-color: var(--light-blue);
-  color: var(--dark-background);
+  color: var(--dark-blue);
+  font-weight: 500;
+  font-style: normal;
   padding: 10px;
   border-radius: .4em;
   z-index: -1;
@@ -74,7 +76,7 @@ img {
 }
 .button {
   background-color: var(--light-blue);
-  color: var(--dark-background);
+  color: var(--dark-blue);
 }
 
 @media screen and (max-width: 768px) {
