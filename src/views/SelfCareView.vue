@@ -1,82 +1,64 @@
 <template>
   <div class="container">
-    <div class="smaller-container">
-      <div class="debug-ducky">
-        <img src="../assets/unicornducky.png" alt="" />
-        <div class="ducky-quote">
-          <p>{{ quote }}</p>
-        </div>
-      </div>
+   <div class="quote">
+      <span class="left"><img src="../assets/unicornducky.png" alt=""></span>
+          <blockquote>{{ quote }}</blockquote>
     </div>
     <div class="help">
       <button class="button" @click="fetchNewQuote">Get more!</button>
-    </div>
+    </div>   
   </div>
+
 </template>
 <style scoped>
-.container {
-  width: 800px;
+
+.quote {
+  text-align: center;
+  font-size: 1.5rem;
   margin: auto;
-  border-radius: 20px;
-}
-.ducky-quote{
+  padding: 15px;
+  border: 2px solid var(--yellow);
+  border-radius: 8px;
+  border-style: groove;
+  max-width: 70%;
   position: relative;
-  background-color: var(--light-blue);
-  color: var(--dark-blue);
-  font-weight: 500;
-  font-style: normal;
-  padding: 10px;
-  border-radius: .4em;
-  z-index: -1;
+  margin-top: 100px;
 }
-.ducky-quote::after{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 15px solid transparent;
-	border-right-color: var(--light-blue);
-	border-left: 0;
-	border-top: 0;
-	margin-top: -7.5px;
-	margin-left: -15px;
-}
-.smaller-container{
-  display: grid;
-}
-img {
-  height: 80px;
-  padding-right: 10px;
-  padding-top: 10px;
-  margin-left: 40px;
-}
-.debug-ducky {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  font-weight: 600;
-  font-style: italic;
-  max-width: 800px;
-}
-#debug {
-  justify-self: center;
-  width: 80%;
-  border: 1px solid var(--light-blue);
-  border-radius: 18px;
-  font-weight: 600;
+blockquote {
   color: var(--light-blue);
-  padding: 20px;
-  line-height: 1.5;
-  background-color: var(--dark-background);
+  text-shadow: -1px 1px var(--dark-blue);
+  position: relative;
+}
+.left img {
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  width: 100px;
+  padding-bottom: 10px;
+  text-align: left;
+  font-size: 6rem;
+  color: var(--dark-blue);
+  background-color: var(--nav-background);
+  line-height: 150px;
 }
 .help {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .button {
-  background-color: var(--light-blue);
+  border: 1px solid var(--dark-blue);
+  background-color: none;
   color: var(--dark-blue);
+}
+.button:hover {
+  background-color: var(--light-blue);
+  transition: 2ms;
+  font-weight: 600;
+  padding:  0.7em 1.3em;
+}
+.button:active {
+  background-color: var(--dark-blue);
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
 }
 
 @media screen and (max-width: 768px) {
@@ -89,8 +71,10 @@ img {
   }
 }
 @media (prefers-color-scheme: light){
+
   .button {
-    background-color: var(--light-blue);
+    border: 1px solid var(--dark-blue);
+    background-color: none;
     color: var(--dark-background);
   }
 }
