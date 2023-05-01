@@ -23,6 +23,7 @@
   max-width: 70%;
   position: relative;
   margin-top: 100px;
+  z-index: -1;
 }
 blockquote {
   color: var(--light-blue);
@@ -34,6 +35,7 @@ blockquote {
   top: -50px;
   left: -20px;
   width: 100px;
+  z-index: -1;
   padding-bottom: 10px;
   text-align: left;
   font-size: 6rem;
