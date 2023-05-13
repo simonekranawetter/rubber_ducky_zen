@@ -7,7 +7,7 @@
         <h3>The self-care app for developers</h3>
         <p>
           Welcome to Rubber Ducky Zen, the app that helps developers prioritize
-          their mental health and wellbeing. Whether you're just starting out or
+          their mental health and well-being. Whether you're just starting out or
           you've been coding for years, we're here to help you find balance and
           relaxation in your busy life.
         </p>
@@ -20,10 +20,9 @@
         <p>
           It's not uncommon for developers to feel like they're not good enough
           or that they don't belong. That's why Rubber Ducky Zen includes a
-          section dedicated to helping you fight imposter syndrome with self
-          care tips form selfcaretech-ducky. With daily affirmations and
-          motivational quotes, you can start each day feeling confident and
-          ready to take on any challenge.
+          section dedicated to helping you fight imposter syndrome with self-care
+          tips from selfcaretech-ducky. With daily affirmations and motivational quotes,
+          you can start each day feeling confident and ready to take on any challenge.
         </p>
       </div>
     </div>
@@ -33,17 +32,15 @@
         <h3>Get expert rubber ducky debugging support</h3>
         <p>
           We know that debugging can be frustrating, and sometimes you just need
-          a second pair of eyes to help you solve a problem. That's why our
-          expert rubber duckies are available 24/7 to provide you with debugging
-          support and advice. Whether you're stuck on a coding problem or you
-          just need to talk through a tough day, our team is here to support
-          you.
+          a second pair of eyes to help you solve a problem. That's why our expert
+          rubber duckies are available 24/7 to provide you with debugging support
+          and advice. Whether you're stuck on a coding problem or you just need
+          to talk through a tough day, our team is here to support you.
         </p>
       </div>
     </div>
   </div>
 </template>
-
 <script lang="ts">
 import { defineComponent } from "vue";
 
