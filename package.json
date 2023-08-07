@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pnpm": "^7.30.3",
+    "pnpm": "^7.33.4",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
