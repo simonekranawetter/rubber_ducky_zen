@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       pnpm:
-        specifier: ^9.15.0
-        version: 9.15.0
+        specifier: ^10.0.0
+        version: 10.0.0
       vue:
         specifier: ^3.2.47
         version: 3.2.47
@@ -267,8 +267,8 @@ packages:
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
-  pnpm@9.15.0:
-    resolution: {integrity: sha512-duI3l2CkMo7EQVgVvNZije5yevN3mqpMkU45RBVsQpmSGon5djge4QfUHxLPpLZmgcqccY8GaPoIMe1MbYulbA==}
+  pnpm@10.0.0:
+    resolution: {integrity: sha512-uP71SUvT/ky9Ttq9B0XfLuW+PksLiwj6ZDqj5MZwLMwPANaPqKjJhYpzWgAySFpEmQ7SgQUmyHXkFvABsX3xKw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -544,7 +544,7 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  pnpm@9.15.0: {}
+  pnpm@10.0.0: {}
 
   postcss@8.4.31:
     dependencies:
